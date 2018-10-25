@@ -78,6 +78,11 @@ public class DavidDriver{
 		beef.add(1, "cow");
 		System.out.println(beef);
 
+		System.out.println("\nTesting remove() with cow: should return [red, meat]");
+		System.out.println(beef);
+		System.out.println(beef.remove("cow"));
+		System.out.println(beef);
+
 		//testing set()
 		System.out.println("\n\n!!Testing set()!!");
 		System.out.println("Using SuperArray from !!testing get()!!");
