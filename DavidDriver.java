@@ -31,6 +31,8 @@ public class DavidDriver{
 		System.out.println(beef.indexOf("red"));
 		System.out.println("\nChecking indexOf with cow: should return 1");
 		System.out.println(beef.indexOf("cow"));
+		System.out.println("\nChecking indexOf with blue: should return -1");
+		System.out.println(beef.indexOf("blue"));
 		System.out.println("\nChecking add() and toString(): should return [red, cow]");
 		System.out.println(beef);
 		for (int x = 0; x < 8; x++){
@@ -42,7 +44,8 @@ public class DavidDriver{
 		System.out.println(beef.add("cow"));
 		System.out.println(beef.add("meat"));
 		System.out.println(beef);
-		System.out.println(beef.toStringDebug());
+		System.out.println("\nChecking lastIndexOf with cow: should return 12");
+		System.out.println(beef.lastIndexOf("cow"));
 
 		//testing clear()
 		System.out.println("\n\n!!Testing clear()!!");
@@ -71,6 +74,9 @@ public class DavidDriver{
 		System.out.println("\nTesting get() for out of bounds: should return null");
 		System.out.println(beef.get(-1));
 		System.out.println(beef.get(10));
+		System.out.println("\nTesting add() with cow at index 1: should return [red, cow, cow, meat]");
+		beef.add(1, "cow");
+		System.out.println(beef);
 
 		//testing set()
 		System.out.println("\n\n!!Testing set()!!");

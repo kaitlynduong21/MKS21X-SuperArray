@@ -107,8 +107,26 @@ public class SuperArray {
         return i;
       }
     }
-    return 123;
+    return -1;
   }
 
-  //public int lastIndexOf(String target)
+  public int lastIndexOf(String target) {
+    for (int i = size - 1; i <= 0; i--) {
+      if (data[i].equals(target)){
+        return i;
+      }
+    }
+    return -1;
+  }
+
+  public void add(int index, String element) {
+    for (int i = size - index + 1; i < index - 1; i--) {
+      if (size == data.length) {
+        resize();
+      }
+      data[i] = data[i - 1];
+    }
+    size ++;
+    set(index, element);
+  }
 }
