@@ -20,7 +20,6 @@ public class DavidDriver{
 		System.out.println("\n\n!!Testing add()!!");
 		System.out.println("Testing add() while empty: should return true");
 		System.out.println(beef.add("red"));
-		System.out.println(beef.size());
 		System.out.println("\nChecking add() and toString(): should return [red]");
 		System.out.println(beef);
 		beef.add("cow");
@@ -29,6 +28,7 @@ public class DavidDriver{
 		for (int x = 0; x < 9; x++){
 			beef.add("filler");
 		}
+		System.out.println(beef);
 		System.out.println("\n\nTesting add() while full: should return false");
 		System.out.println(beef.add("full"));
 

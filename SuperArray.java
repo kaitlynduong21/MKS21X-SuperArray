@@ -18,14 +18,6 @@ public class SuperArray {
   }
 
   public int size() {
-    for (int i = 0; i < data.length; i++) {
-      if (data[i] != null) {
-        size++;
-      }
-      if (data[i] == null) {
-        return size;
-      }
-    }
     return size;
   }
 
@@ -34,12 +26,12 @@ public class SuperArray {
   }
 
   public boolean add(String element) {
-    /*if (size == data.length) {
-      resize();
-    }*/
-    size();
+    if (size == data.length - 1) {
+      return false;
+    }
     data[size] = element;
-    return (data[size] == element);
+    size++;
+    return (data[size - 1] == element);
   }
 
   public String toString() {
@@ -84,9 +76,9 @@ public class SuperArray {
   }
 
   private void resize() {
-    SuperArray newdata = new SuperArray(data.length * 2);
+    SuperArray newArray = new SuperArray(data.length * 2);
     for (int i = 0; i < data.length; i ++) {
-      newdata.data[i] = data[i];
+      newArray.data[i] = data[i];
     }
   }
 }
