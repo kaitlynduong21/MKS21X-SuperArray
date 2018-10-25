@@ -20,6 +20,10 @@ public class DavidDriver{
 		System.out.println("\n\n!!Testing add()!!");
 		System.out.println("Testing add() while empty: should return true");
 		System.out.println(beef.add("red"));
+		System.out.println("\nChecking contains() with red: should return true");
+		System.out.println(beef.contains("red"));
+		System.out.println("\nChecking contains() with blue: should return false");
+		System.out.println(beef.contains("blue"));
 		System.out.println("\nChecking add() and toString(): should return [red]");
 		System.out.println(beef);
 		beef.add("cow");
@@ -29,8 +33,7 @@ public class DavidDriver{
 			beef.add("filler");
 		}
 		System.out.println(beef);
-		System.out.println(beef.toStringDebug());
-		System.out.println("\n\nTesting add() while full WITH RESIZE: should return true");
+		System.out.println("\n\nTesting add() while full WITH RESIZE: should return true three times");
 		System.out.println(beef.add("full"));
 		System.out.println(beef.add("cow"));
 		System.out.println(beef.add("meat"));
