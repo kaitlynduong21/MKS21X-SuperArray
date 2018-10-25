@@ -27,6 +27,10 @@ public class DavidDriver{
 		System.out.println("\nChecking add() and toString(): should return [red]");
 		System.out.println(beef);
 		beef.add("cow");
+		System.out.println("\nChecking indexOf with red: should return 0");
+		System.out.println(beef.indexOf("red"));
+		System.out.println("\nChecking indexOf with cow: should return 1");
+		System.out.println(beef.indexOf("cow"));
 		System.out.println("\nChecking add() and toString(): should return [red, cow]");
 		System.out.println(beef);
 		for (int x = 0; x < 8; x++){

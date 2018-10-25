@@ -100,4 +100,15 @@ public class SuperArray {
     }
     return false;
   }
+
+  public int indexOf(String target) {
+    for (int i = 0; i < size; i ++) {
+      if (data[i].equals(target)){
+        return i;
+      }
+    }
+    return 123;
+  }
+
+  //public int lastIndexOf(String target)
 }
