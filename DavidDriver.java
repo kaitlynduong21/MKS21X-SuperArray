@@ -29,8 +29,12 @@ public class DavidDriver{
 			beef.add("filler");
 		}
 		System.out.println(beef);
-		System.out.println("\n\nTesting add() while full: should return false");
+		System.out.println("\n\nTesting add() while full WITH RESIZE: should return true");
 		System.out.println(beef.add("full"));
+		System.out.println(beef.add("cow"));
+		System.out.println(beef.add("meat"));
+		System.out.println(beef);
+		System.out.println(beef.toStringDebug());
 
 		//testing clear()
 		System.out.println("\n\n!!Testing clear()!!");

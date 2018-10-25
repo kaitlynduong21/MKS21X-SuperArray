@@ -3,14 +3,15 @@ public class SuperArray {
   private String[] data;
   private int size;
 
+  //PHASE ONE
   public SuperArray() {
-     data = new String [10];
-     size = 0;
+    data = new String [10];
+    size = 0;
   }
 
   public SuperArray(int x) {
-     data = new String [x];
-     size = 0;
+    data = new String [x];
+    size = 0;
   }
 
   public void clear(){
@@ -27,7 +28,7 @@ public class SuperArray {
 
   public boolean add(String element) {
     if (size == data.length - 1) {
-      return false;
+      resize();
     }
     data[size] = element;
     size++;
@@ -75,10 +76,13 @@ public class SuperArray {
     return old;
   }
 
+  //PHASE TWO
+
   private void resize() {
     SuperArray newArray = new SuperArray(data.length * 2);
     for (int i = 0; i < data.length; i ++) {
       newArray.data[i] = data[i];
     }
+    data = newArray.data;
   }
 }
