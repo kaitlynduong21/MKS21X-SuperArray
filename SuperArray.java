@@ -27,7 +27,7 @@ public class SuperArray {
   }
 
   public boolean add(String element) {
-    if (size == data.length - 1) {
+    if (size == data.length) {
       resize();
     }
     data[size] = element;
@@ -50,13 +50,17 @@ public class SuperArray {
 
   public String toStringDebug() {
     String newString = "[";
-    for (int i = 0; i < size; i ++) {
+    for (int i = 0; i < size - 1; i ++) {
       newString = newString + data[i] + ", ";
     }
     for (int i = size; i < data.length - 1; i ++) {
       newString = newString + "null, ";
     }
-    newString += "null]";
+    if (data[data.length - 1] == null) {
+      newString += "null]";
+    } else {
+      newString = newString + data[size - 1] + "]";
+    }
     return newString;
   }
 

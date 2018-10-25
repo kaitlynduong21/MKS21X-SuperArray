@@ -25,10 +25,11 @@ public class DavidDriver{
 		beef.add("cow");
 		System.out.println("\nChecking add() and toString(): should return [red, cow]");
 		System.out.println(beef);
-		for (int x = 0; x < 9; x++){
+		for (int x = 0; x < 8; x++){
 			beef.add("filler");
 		}
 		System.out.println(beef);
+		System.out.println(beef.toStringDebug());
 		System.out.println("\n\nTesting add() while full WITH RESIZE: should return true");
 		System.out.println(beef.add("full"));
 		System.out.println(beef.add("cow"));
