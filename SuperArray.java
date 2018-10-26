@@ -9,8 +9,8 @@ public class SuperArray {
     size = 0;
   }
 
-  public SuperArray(int x) {
-    data = new String [x];
+  public SuperArray(int startingCapacity) {
+    data = new String [startingCapacity];
     size = 0;
   }
 
@@ -89,7 +89,7 @@ public class SuperArray {
   //PHASE TWO
 
   private void resize() {
-    SuperArray newArray = new SuperArray(data.length * 2);
+    SuperArray newArray = new SuperArray(data.length * 2 + 1);
     for (int i = 0; i < data.length; i ++) {
       newArray.data[i] = data[i];
     }
