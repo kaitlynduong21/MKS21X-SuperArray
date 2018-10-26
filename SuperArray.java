@@ -135,6 +135,8 @@ public class SuperArray {
       }
       size ++;
       set(index, element);
+    } else {
+      System.out.println("error: index out of bounds");
     }
   }
 
