@@ -70,14 +70,16 @@ public class SuperArray {
 
   public String get(int index) {
     if (index < 0 || index >= size) {
-      return "null";
+      System.out.println ("error: index out of bounds");
+      return null;
     }
     return data[index];
   }
 
   public String set(int index, String element) {
     if (index < 0 || index >= size) {
-      return "null";
+      System.out.println ("error: index out of bounds");
+      return null;
     }
     String old = data[index];
     data[index] = element;
@@ -151,10 +153,11 @@ public class SuperArray {
 
   public String remove(int index) {
     if (index < 0 || index >= size) {
-      return "null";
+      System.out.println("error: index out of bounds");
+      return null;
     }
     if (data[index] == null) {
-      return "null";
+      return null;
     }
     String s = data[index];
     for (int i = index; i < size - 1; i ++) {
