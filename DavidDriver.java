@@ -44,7 +44,7 @@ public class DavidDriver{
 		System.out.println(beef.add("cow"));
 		System.out.println(beef.add("meat"));
 		System.out.println(beef);
-		System.out.println("\nChecking lastIndexOf with cow: should return 12");
+		System.out.println("\nChecking lastIndexOf with cow: should return 11");
 		System.out.println(beef.lastIndexOf("cow"));
 
 		//testing clear()
@@ -74,13 +74,17 @@ public class DavidDriver{
 		System.out.println("\nTesting get() for out of bounds: should return null");
 		System.out.println(beef.get(-1));
 		System.out.println(beef.get(10));
-		System.out.println("\nTesting add() with cow at index 1: should return [red, cow, cow, meat]");
-		beef.add(1, "cow");
-		System.out.println(beef);
 
-		System.out.println("\nTesting remove() with cow: should return [red, meat]");
+		System.out.println("\nTesting remove() with cow: should return true and [red, meat]");
 		System.out.println(beef);
 		System.out.println(beef.remove("cow"));
+		System.out.println(beef);
+		System.out.println("Testing remove() with cow: should return false and [red, meat]");
+		System.out.println(beef.remove("blue"));
+		System.out.println(beef);
+
+		System.out.println("\nTesting add() with cow at index 1: should return [red, cow, cow, meat]");
+		beef.add(1, "cow");
 		System.out.println(beef);
 
 		//testing set()

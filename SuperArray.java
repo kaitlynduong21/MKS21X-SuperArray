@@ -23,7 +23,7 @@ public class SuperArray {
   }
 
   public boolean isEmpty() {
-    return size == 0;
+    return size() == 0;
   }
 
   public boolean add(String element) {
@@ -37,32 +37,33 @@ public class SuperArray {
 
   public String toString() {
     String newString = "[";
-    for (int i = 0; i < size - 1; i ++) {
-      newString = newString + data[i] + ", ";
+    for (int i = 0; i < size(); i ++) {
+      newString = newString + data[i];
+      if (i != size() - 1) {
+        newString += ", ";
+      }
     }
-    if (size != 0) {
-      newString = newString + data[size - 1] + "]";
-    } else {
-      newString += "]";
-    }
+    newString = newString + "]";
     return newString;
   }
 
   public String toStringDebug() {
     String newString = "[";
-    for (int i = 0; i < size - 1; i ++) {
-      newString = newString + data[i] + ", ";
+    for (int i = 0; i < size(); i ++) {
+      newString = newString + data[i];
+      if (i != data.length - 1) {
+        newString += ", ";
+      }
     }
-    for (int i = size; i < data.length - 1; i ++) {
-      newString = newString + "null, ";
+    for (int x = size; x < data.length - 1; x ++) {
+      newString = newString + "null";
+      if (x != data.length - 1) {
+        newString += ", ";
+      }
     }
-    if (data[data.length - 1] == null) {
-      newString += "null]";
-    } else {
-      newString = newString + data[size - 1] + "]";
-    }
-    return newString;
-  }
+    newString += "]";
+  return newString;
+}
 
   public String get(int index) {
     if (index < 0 || index >= size) {
@@ -111,9 +112,9 @@ public class SuperArray {
   }
 
   public int lastIndexOf(String target) {
-    for (int i = size - 1; i < 0; i--) {
+    for (int i = size - 1; i >= 0; i--) {
       if (data[i].equals(target)){
-        return i ;
+        return i;
       }
     }
     return -1;
