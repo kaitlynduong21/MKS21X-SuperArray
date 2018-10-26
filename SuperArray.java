@@ -58,7 +58,7 @@ public class SuperArray {
         newString += ", ";
       }
     }
-    for (int x = size; x < data.length - 1; x ++) {
+    for (int x = size; x < data.length; x ++) {
       newString = newString + "null";
       if (x != data.length - 1) {
         newString += ", ";
@@ -124,14 +124,16 @@ public class SuperArray {
   }
 
   public void add(int index, String element) {
-    if (size == data.length) {
-      resize();
+    if (index > 0 && index <= size) {
+      if (size == data.length) {
+        resize();
+      }
+      for (int i = size; i >= index; i--) {
+        data[i] = data[i - 1];
+      }
+      size ++;
+      set(index, element);
     }
-    for (int i = size; i >= index; i--) {
-      data[i] = data[i - 1];
-    }
-    size ++;
-    set(index, element);
   }
 
   public boolean remove(String target) {
@@ -145,5 +147,20 @@ public class SuperArray {
       }
     }
     return false;
+  }
+
+  public String remove(int index) {
+    if (index < 0 || index >= size) {
+      return "null";
+    }
+    if (data[index] == null) {
+      return "null";
+    }
+    String s = data[index];
+    for (int i = index; i < size - 1; i ++) {
+      data[i] = data [i + 1];
+    }
+    size--;
+    return s;
   }
 }
