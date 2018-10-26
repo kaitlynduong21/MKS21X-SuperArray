@@ -62,5 +62,10 @@ public class Driver {
     System.out.println("SA status:                         " + SA.toString() + "\n\n");
 
     /**************************************************************************/
+
+    System.out.println("\n\n!!Testing clear()!!");
+		System.out.println("Testing clear(): should return []");
+		SA.clear();
+		System.out.println(SA);
   }
 }
