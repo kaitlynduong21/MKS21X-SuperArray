@@ -62,8 +62,8 @@ public class SuperArray {
       }
     }
     newString += "]";
-  return newString;
-}
+    return newString;
+  }
 
   public String get(int index) {
     if (index < 0 || index >= size) {
@@ -121,10 +121,10 @@ public class SuperArray {
   }
 
   public void add(int index, String element) {
-    for (int i = size; i <= index; i--) {
-      //if (size == data.length) {
-        //resize();
-      //}
+    if (size == data.length) {
+      resize();
+    }
+    for (int i = size; i >= index; i--) {
       data[i] = data[i - 1];
     }
     size ++;

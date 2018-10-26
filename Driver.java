@@ -54,7 +54,7 @@ public class Driver {
     SA.add(5, "jedi master");
     System.out.println("Adding \"jedi master\" to index 5...");
     System.out.println("SA status:                         " + SA.toString());
-    SA.remove("6");
+    SA.remove("5");
     System.out.println("\nRemoving the number \"5\" from index 6...");
     System.out.println("SA status:                         " + SA.toString());
     SA.remove("38");
