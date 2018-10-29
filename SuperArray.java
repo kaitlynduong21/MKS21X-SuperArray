@@ -158,6 +158,18 @@ public class SuperArray {
       System.out.println("error: index out of bounds");
       return null;
     }
+    /*try {
+      String s = data[index];
+      for (int i = index; i < size - 1; i ++) {
+        data[i] = data [i + 1];
+      }
+      size--;
+      return s;
+    } catch (IllegalArgumentException e) {
+      System.out.println("Caught a problem in main.");
+      return null;
+    }
+  }*/
     if (data[index] == null) {
       return null;
     }
