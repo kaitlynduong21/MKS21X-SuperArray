@@ -70,7 +70,7 @@ public class MinYeongDriver {
     System.out.println("SA status:                         " + SA.toString() + "\n\n");
 
     System.out.println("\nTrying to remove an index that is out of bounds");
-    //SA.remove(35);  //Comment in this line to check to see if it throws an error
+    SA.remove(35);  //Comment in this line to check to see if it throws an error
 
     SA.set(5,"MGMT");
     System.out.println("Setting \"MGMT\" to index 5...");
