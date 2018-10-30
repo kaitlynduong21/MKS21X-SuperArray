@@ -9,8 +9,11 @@ public class SuperArray {
     size = 0;
   }
 
-  public SuperArray(int startingCapacity) {
-    data = new String [startingCapacity];
+  public SuperArray(int initialCapacity) {
+    if (initialCapacity < 0) {
+      throw new IllegalArgumentException ("Initial capacity cannot be " + initialCapacity);
+    }
+    data = new String [initialCapacity];
     size = 0;
   }
 
