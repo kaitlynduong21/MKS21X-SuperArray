@@ -18,9 +18,7 @@ public class SuperArray {
   }
 
   public void clear(){
-    for (int i = 0; i > size; i ++) {
-      data[i] = null;
-    }
+    data = new String[10];
     size = 0;
   }
 
@@ -90,11 +88,11 @@ public class SuperArray {
   //PHASE TWO
 
   private void resize() {
-    SuperArray newArray = new SuperArray(data.length * 2 + 1);
+    String[] newArray = new String[data.length * 2 + 1];
     for (int i = 0; i < data.length; i ++) {
       newArray.data[i] = data[i];
     }
-    data = newArray.data;
+    data = newArray;
   }
 
   //PHASE THREE
@@ -141,14 +139,9 @@ public class SuperArray {
   }
 
   public boolean remove(String target) {
-    for (int i = 0; i < size - 1; i ++) {
-      if (data[i].equals(target)) {
-        for (int x = i; x < size; x ++) {
-          data[x] = data [x + 1];
-        }
-        size--;
-        return true;
-      }
+    if (contains(target)) {
+      remove(indexOf(target));
+      return true;
     }
     return false;
   }
