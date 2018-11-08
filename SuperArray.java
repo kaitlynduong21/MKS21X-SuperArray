@@ -135,7 +135,7 @@ public class SuperArray {
         data[i + 1] = data[i];
       }
       size ++;
-      set(index, element);
+      data[index] = element;
   }
 
   public boolean remove(String target) {
