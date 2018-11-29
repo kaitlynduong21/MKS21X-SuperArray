@@ -132,7 +132,7 @@ public class SuperArray {
         resize();
     }
     for (int i = size; i > index; i--) {
-        data[i + 1] = data[i];
+        data[i] = data[i -1];
       }
       size ++;
       data[index] = element;
