@@ -36,7 +36,7 @@ public class SuperArray {
     }
     data[size] = element;
     size++;
-    return (data[size - 1] == element);
+    return true;
   }
 
   public String toString() {
@@ -132,7 +132,7 @@ public class SuperArray {
         resize();
     }
     for (int i = size; i > index; i--) {
-        data[i] = data[i -1];
+        data[i] = data[i - 1];
       }
       size ++;
       data[index] = element;
